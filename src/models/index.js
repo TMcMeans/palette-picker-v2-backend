@@ -1,6 +1,6 @@
 import Sequelize from 'sequelize';
 
-const sequelize = new Sequelize(process.env.DATABASE_PROJECT, {
+const sequelize = new Sequelize(process.env.DATABASE_PROJECTS, {
   dialect: 'postgres'
 });
 
