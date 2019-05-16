@@ -6,7 +6,7 @@ const app = express();
 
 //set server port and title
 app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Palette Picker v2 Server';
+app.locals.title = 'Palette Picker v2';
 
 //Use bodyParser middleware to parse incoming requests
 app.use(bodyParser.json());
