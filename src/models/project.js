@@ -9,8 +9,10 @@ const project = (sequelize, DataTypes) => {
 
   //Create relational db: 1 project:N palettes
   Project.associate = models => {
-    Project.hasMany(models.Palettes);
+    Project.hasMany(models.Palettes, { onDelete: 'CASCADE' });
   };
 
   return Project;
 };
+
+export default project;

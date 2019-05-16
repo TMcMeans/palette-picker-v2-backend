@@ -19,3 +19,5 @@ const palette = (sequelize, DataTypes) => {
 
   return Palette;
 };
+
+export default palette;
