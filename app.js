@@ -1,0 +1,20 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+
+//initialize express server
+const app = express();
+
+//set server port and title
+app.set('port', process.env.PORT || 3000);
+app.locals.title = 'Palette Picker v2 Server';
+
+//Use bodyParser middleware to parse incoming requests
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+//Listen on PORT 3000
+app.listen(app.get('port'), () => {
+  console.log(`${app.locals.title} is running on port ${app.get('port')}`);
+});
+
+module.exports = app;
