@@ -59,7 +59,7 @@ module.exports = {
           .update({
             title: req.body.title || project.title
           })
-          .then(() => res.status(200).send(project))
+          .then(updatedProject => res.status(200).send(updatedProject))
           .catch(error => res.status(400).send(error));
       })
       .catch(error => res.status(400).send(error));

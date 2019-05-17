@@ -15,4 +15,19 @@ module.exports = app => {
   app.put('/api/projects/:projectId', projectsController.update);
   app.delete('/api/projects/:projectId', projectsController.destroy);
   app.post('/api/projects/:projectId/palettes', palettesController.create);
+  app.put(
+    '/api/projects/:projectId/palettes/:paletteId',
+    palettesController.update
+  );
+  app.delete(
+    '/api/projects/:projectId/palettes/:paletteId',
+    palettesController.destroy
+  );
+  //For any other request method
+  app.all('/api/projects/:projectId/palettes', (req, res) =>
+    res.status(405).send({
+      message:
+        'Method Not Allowed: Please use the /api/projects/:projectId endpoint to retrieve all palettes for a given project'
+    })
+  );
 };
