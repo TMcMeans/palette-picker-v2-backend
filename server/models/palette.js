@@ -3,12 +3,6 @@ module.exports = (sequelize, DataTypes) => {
   const Palette = sequelize.define(
     'Palette',
     {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: DataTypes.INTEGER
-      },
       title: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -33,14 +27,6 @@ module.exports = (sequelize, DataTypes) => {
       color5: {
         type: DataTypes.STRING,
         allowNull: false
-      },
-      createdAt: {
-        allowNull: false,
-        type: DataTypes.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: DataTypes.DATE
       }
     },
     {}
