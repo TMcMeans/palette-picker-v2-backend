@@ -1,5 +1,7 @@
 const projectsController = require('../controllers').projects;
 
+const palettesController = require('../controllers').palettes;
+
 module.exports = app => {
   app.get('/api', (req, res) =>
     res.status(200).send({
@@ -9,4 +11,5 @@ module.exports = app => {
 
   app.post('/api/projects', projectsController.create);
   app.get('/api/projects', projectsController.list);
+  app.post('/api/projects/:projectId/palettes', palettesController.create);
 };
