@@ -11,5 +11,6 @@ module.exports = app => {
 
   app.post('/api/projects', projectsController.create);
   app.get('/api/projects', projectsController.list);
+  app.get('/api/projects/:projectId', projectsController.retrieve);
   app.post('/api/projects/:projectId/palettes', palettesController.create);
 };
