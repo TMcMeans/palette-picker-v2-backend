@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "tanjie",
+    "password": null,
+    "database": "pp-projects-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "tanjie",
+    "password": null,
+    "database": "pp-projects-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "tanjie",
+    "password": null,
+    "database": "pp-projects-production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
