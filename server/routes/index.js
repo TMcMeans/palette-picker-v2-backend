@@ -12,5 +12,7 @@ module.exports = app => {
   app.post('/api/projects', projectsController.create);
   app.get('/api/projects', projectsController.list);
   app.get('/api/projects/:projectId', projectsController.retrieve);
+  app.put('/api/projects/:projectId', projectsController.update);
+  app.delete('/api/projects/:projectId', projectsController.destroy);
   app.post('/api/projects/:projectId/palettes', palettesController.create);
 };
