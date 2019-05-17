@@ -12,6 +12,12 @@ app.locals.title = 'Palette Picker v2';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.get('*', (req, res) =>
+  res.status(200).send({
+    message: 'Welcome to the beginning of nothingness.'
+  })
+);
+
 //Listen on PORT 3000
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on port ${app.get('port')}`);
