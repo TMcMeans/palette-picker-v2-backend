@@ -1,5 +1,4 @@
 const projectsController = require('../controllers').projects;
-
 const palettesController = require('../controllers').palettes;
 
 module.exports = app => {
@@ -8,7 +7,6 @@ module.exports = app => {
       message: 'Welcome to the Palette Picker v2 API!'
     })
   );
-
   app.post('/api/projects', projectsController.create);
   app.get('/api/projects', projectsController.list);
   app.get('/api/projects/:projectId', projectsController.retrieve);
